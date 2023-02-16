@@ -7,13 +7,13 @@ class Student(Person):
         self.school_id = school_id
     
     def __str__(self):
-        return f'{self.name} {self.age} {self.password} {self.role} {self.school_id}'
+        return f'\n{self.name.upper()}\n----------\nage: {self.age}\npassword: {self.password}\nrole: {self.role}\nschool id: {self.school_id}'
 
     def all_students():
         students_csv = []
         data = open('/Users/reapingcalamity/Desktop/TangoPlatoon/Assignments/oop-school-interface-i-master/data/students.csv')
         reader = csv.DictReader(data)
         for row in reader:
-            students_csv.append(row)
+            students_csv.append(Student(**row))
         data.close()
-        return f"{students_csv}"
+        return students_csv

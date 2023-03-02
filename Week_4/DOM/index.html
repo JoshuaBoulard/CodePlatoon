@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+  <head>
+    <meta charset="utf-8">
+    <title>TITLE</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Your link to your CSS file -->
+    <link rel="stylesheet" href="guess_number.css">
+    <!-- Your Javascript file goes here -->
+    <script src="index.js" defer></script>
+  </head>
+  <body>
+    <!-- your HTML should go here -->
+    <nav>
+      <h1>Let's Play the Guessing Number Game!</h1>
+    </nav>
+    <form id="guessedNum">
+      <input type="number" id="num" name="guess" min="1" max="100"/>
+      <button onclick="checkGuess()" type="submit" id="Submit">Guess a Number</button>
+      <p id="result"></p>
+      <button onclick="refreshPage()" type="submit">Refresh</button>
+    </form>
+    </div>
+  </body>
+</html>
